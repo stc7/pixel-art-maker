@@ -3,20 +3,32 @@
 
 // When size is submitted by the user, call makeGrid()
 
-function makeGrid(row, col) {
+function makeGrid() {
 
-  row = document.getElementById('inputHeight');
-  col = document.getElementById('inputWeight');
+  var row = Number(document.getElementById('inputHeight').value);
+  var col = Number(document.getElementById('inputWeight').value);
+  var tr, td, row, cell;
+  
+  console.log(row + col);
 
-  for (var n = 1; n <= row; n++) {
-    document.getElementById('pixelCanvas').innerHTML = '<div class="pixelBox"><p>1</p></div>';
-    
-   /* for (var m = 1; m > col; m++) {
-      document.getElementById('')
-    } */
+  for (m = 0; m < row; m++) {
+    tr = document.createElement('tr');
+
+    for (k = 0; k < col; k++) {
+      td = document.createElement('td');
+      tr.appendChild(td);
+    }
+    document.getElementById('pixelCanvas').appendChild(tr);
   }
 
 }
+
+// document.getElementById('pixelCanvas').onmouseover
+this.onclick.('tr').style.background-color = "blue";
+
+
+    
+
 
 /* to do 
 

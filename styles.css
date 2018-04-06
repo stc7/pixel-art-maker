@@ -39,13 +39,7 @@ input[type=number] {
     width: 6em;
 }
 
-.pixelBox {
-    width: 10px;
-    height: 10px;
-    background-color: black; /* placeholder background color for testing */
-    border: 1px, black;
-}
-
-#pixelCanvas {
-    background-color: #d6d6d6;
+td {
+    border: 1px solid black;
+    background-color: white;
 }
