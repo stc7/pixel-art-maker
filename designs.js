@@ -16,6 +16,8 @@ function makeGrid() {
 
     for (k = 0; k < col; k++) {
       td = document.createElement('td');
+      
+
       tr.appendChild(td);
     }
     document.getElementById('pixelCanvas').appendChild(tr);
@@ -23,22 +25,16 @@ function makeGrid() {
 
 }
 
-// document.getElementById('pixelCanvas').onmouseover
-this.onclick.('tr').style.background-color = "blue";
+function changeStyle() {
+  var color = document.getElementById('colorPicker').value;
+  var thisClick = this.getElementByTagName('td');
+  if (thisClick ) {
+
+  } else {
+
+  }
 
 
-    
+}
+ 
 
-
-/* to do 
-
-  create grid width using % screen size width and number = how tall to make a square.
-  allow the individual grid boxes to resize themselves inside
-  on click change to color in 'color picker' 
-  set default background to light tan/grey almost white
-
-
-  **
-  Optional add icon to title bar
-
-*/
