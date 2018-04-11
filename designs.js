@@ -5,15 +5,15 @@
 
 function makeGrid() {
 
-  var row = Number(document.getElementById('inputHeight').value);
-  var col = Number(document.getElementById('inputWeight').value);
-  var tr, td, row, cell;
+  let row = Number(document.getElementById('inputHeight').value);
+  let col = Number(document.getElementById('inputWeight').value);
+  let tr, td, cell;
   
   console.log(row + col);
 
   for (m = 0; m < row; m++) {
     tr = document.createElement('tr');
-
+    tr.setAttribute("class", "colorPick");
     for (k = 0; k < col; k++) {
       td = document.createElement('td');
       
@@ -26,14 +26,11 @@ function makeGrid() {
 }
 
 function changeStyle() {
-  var color = document.getElementById('colorPicker').value;
-  var thisClick = this.getElementByTagName('td');
-  if (thisClick ) {
+  let color = document.getElementById('colorPicker').value;
 
-  } else {
-
-  }
-
+  let rowColor = document.getElementsByClassName("colorPick");
+  
+  rowColor.style.backgroundColor = color;
 
 }
  
